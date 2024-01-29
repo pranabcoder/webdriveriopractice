@@ -50,4 +50,7 @@ Example - Not operator
 
 console.log(`Not operator - Negation of required is ${!required}`); // Not operator - Negation of required is false
 
+/* 
 
+Difference between const and let - We cannot reassign a value to a const variable but possible using let keyword
+*/
