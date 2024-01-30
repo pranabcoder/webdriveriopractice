@@ -20,7 +20,6 @@ if (!flag) {
 
 /*
 Example - While Loop
-
 while (true) {
     console.log("I am in while loop");
 }
@@ -32,3 +31,12 @@ while (i < 10) {
     i++;
 }
 console.log(output); // 0 1 2 3 4 5 6 7 8 9
+
+/*
+Example - Do While Loop
+*/
+do {
+    i++;
+} while (i > 10);
+
+console.log(i); // 11
