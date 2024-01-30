@@ -69,3 +69,27 @@ for (let k = 1; k <= 10; k++) {
         console.log("From 1 to 10 common multiple between 2 and 5 is " + k); // From 1 to 10 common multiple between 2 and 5 is 10
     }
 }
+
+/* 
+Example - Print a number which is common multiple of 2 or 5, the value should be in range of 1 to 10
+*/
+for (let l = 1; l <= 10; l++) {
+    if (l % 2 == 0 || l % 5 == 0) {
+        console.log("From 1 to 10 common multiple between 2 or 5 is " + l); // From 1 to 10 common multiple between 2 or 5 is 2,4,5,6,8,10
+    }
+}
+
+/* 
+Example - Print first 3 numbers which is common multiple of 2 or 5, the value should be in range of 1 to 100
+*/
+
+let count = 0;
+for (let m = 1; m <= 100; m++) {
+    if (m % 2 == 0 && m % 5 == 0) {
+        console.log("From 1 to 100 common multiple between 2 or 5 is " + m); // From 1 to 100 common multiple between 2 or 5 is 10,20,30
+        count++;
+    }
+    if (count == 3) {
+        break;
+    }
+}
