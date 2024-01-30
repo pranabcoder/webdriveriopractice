@@ -60,3 +60,12 @@ while (required) {
     console.log(required); // true
     required = false;
 }
+
+/* 
+Example - Print a number which is common multiple of 2 and 5, the value should be in range of 1 to 10
+*/
+for (let k = 1; k <= 10; k++) {
+    if (k % 2 == 0 && k % 5 == 0) {
+        console.log("From 1 to 10 common multiple between 2 and 5 is " + k); // From 1 to 10 common multiple between 2 and 5 is 10
+    }
+}
