@@ -34,9 +34,29 @@ console.log(output); // 0 1 2 3 4 5 6 7 8 9
 
 /*
 Example - Do While Loop
-*/
+
 do {
     i++;
 } while (i > 10);
 
 console.log(i); // 11
+*/
+
+/*
+Example - For Loop
+*/
+let result = "";
+for (let k = 0; k < 10; k++) {
+    result += k + "\t";
+}
+console.log(result); // 0 1 2 3 4 5 6 7 8 9
+
+/* 
+Example of While loop , where it is run based on the statement also
+*/
+
+let required = true;
+while (required) {
+    console.log(required); // true
+    required = false;
+}
