@@ -78,3 +78,6 @@ for (let i = 0; i < marks.length; i++) {
 }
 console.log('Sum of all the elements of an array', sum); // 258
 
+/*
+Example - reduce method in array
+*/
