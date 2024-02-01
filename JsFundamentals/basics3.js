@@ -80,4 +80,40 @@ console.log('Sum of all the elements of an array', sum); // 258
 
 /*
 Example - reduce method in array
+
+The reduce method in JavaScript is a powerful function used for reducing an array to a single value. 
+It executes a provided function for each value of the array (from left to right) and accumulates the result. 
+The reduce method is commonly used for tasks like summing all values in an array or creating 
+a single aggregated object from an array of objects.
+
+Here's the basic syntax: 
+arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])
+
+arr: The array to reduce.
+callback: A function to execute on each element in the array (except for the first, if no initialValue is provided). It takes four arguments:
+accumulator: The accumulator accumulates the callback's return values; it 
+is the accumulated value previously returned in the last invocation of the callback, or initialValue, if supplied.
+currentValue: The current element being processed in the array.
+index (Optional): The index of the current element being processed in the array.
+array (Optional): The array reduce was called upon.
+initialValue (Optional): A value to use as the first argument to the first call of the callback. 
+If no initial value is supplied, the first element in the array will be used as the initial 
+accumulator value and skipped as currentValue.
+
 */
+/*
+Example 1: Summing an Array of Numbers
+*/
+const array = [1, 2, 3, 4];
+const result = array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(result); // output: 10
+
+/*
+Example 2: Creating an Object from an Array of Objects
+*/
+const arrayOfObjects = [{ key: 'one', value: 1 }, { key: 'two', value: 2 }];
+const combinedObject = arrayOfObjects.reduce((accumulator, currentValue) => {
+  accumulator[currentValue.key] = currentValue.value;
+  return accumulator;
+}, {});
+console.log(combinedObject); // output: { one: 1, two: 2 }
