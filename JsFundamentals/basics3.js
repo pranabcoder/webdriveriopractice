@@ -124,3 +124,25 @@ Example 3: Find the sum of all numbers in an array - marks
 
 const sumOfMarks = marks.reduce((sum, totalMarks) => sum + totalMarks, 0);
 console.log('Sum of all the elements of an array using reduce method', sumOfMarks); // 258
+
+/* 
+Example - print even numbers in an array
+*/
+const scores = [12, 13, 14, 16];
+
+const evenScores = scores.filter(score => score % 2 === 0);
+console.log(evenScores); // [ 12, 14, 16 ]
+
+/*
+Example - Find the even numbers in an array and multiply them by 3
+*/
+
+const evenNumbersByThree = scores.filter(score => score % 2 === 0).map(score => score * 3);
+console.log(evenNumbersByThree); // [ 36, 42, 48 ]
+
+/*
+Example - Find the even numbers in an array and multiply them by 3 after that sum them up
+*/
+const evenNumbersByThreeAndSum = scores.filter(score => score % 2 === 0).map(score => score * 3).reduce((sum, total) => sum + total, 0);
+console.log(evenNumbersByThreeAndSum); // 126
+
