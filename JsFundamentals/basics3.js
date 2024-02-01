@@ -117,3 +117,10 @@ const combinedObject = arrayOfObjects.reduce((accumulator, currentValue) => {
   return accumulator;
 }, {});
 console.log(combinedObject); // output: { one: 1, two: 2 }
+
+/*
+Example 3: Find the sum of all numbers in an array - marks
+*/
+
+const sumOfMarks = marks.reduce((sum, totalMarks) => sum + totalMarks, 0);
+console.log('Sum of all the elements of an array using reduce method', sumOfMarks); // 258
