@@ -138,11 +138,15 @@ Example - Find the even numbers in an array and multiply them by 3
 */
 
 const evenNumbersByThree = scores.filter(score => score % 2 === 0).map(score => score * 3);
-console.log(evenNumbersByThree); // [ 36, 42, 48 ]
+let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.sort((a, b) => a.localeCompare(b));
+console.log(fruits); // [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+let scoresOne = [12, 3, 13, 19, 16, 14];
+scoresOne.sort((a, b) => a - b);
+console.log(scoresOne);  // [ 3, 12, 13, 14, 16, 19 ]
 
-/*
-Example - Find the even numbers in an array and multiply them by 3 after that sum them up
+/* 
+Example - Sort array elements in descending order
 */
-const evenNumbersByThreeAndSum = scores.filter(score => score % 2 === 0).map(score => score * 3).reduce((sum, total) => sum + total, 0);
-console.log(evenNumbersByThreeAndSum); // 126
-
+fruits.reverse();
+console.log(fruits); // [ 'Mango', 'Apple', 'Orange', 'Banana' ]
