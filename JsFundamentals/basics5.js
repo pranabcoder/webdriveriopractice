@@ -27,3 +27,10 @@ console.log('Split the string into an array', splitDay); // [ 'Mon', 'day ' ]
 Example - Print the splited array elements
 */
 console.log('Print the splited array elements =>', splitDay[1]); // day
+
+/*
+Example - trim the spaces from the string
+*/
+console.log('Length of the string before trim', splitDay[1].length); // 4
+console.log('Trim the spaces from the string', splitDay[1].trim()); // day
+console.log('Length of the string after trim', splitDay[1].trim().length); // 3
