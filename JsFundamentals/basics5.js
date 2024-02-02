@@ -34,3 +34,21 @@ Example - trim the spaces from the string
 console.log('Length of the string before trim', splitDay[1].length); // 4
 console.log('Trim the spaces from the string', splitDay[1].trim()); // day
 console.log('Length of the string after trim', splitDay[1].trim().length); // 3
+
+/*
+Example - Suppose we got two dates in string format from browser.
+Get the difference between the two dates.
+*/
+
+let date = '23';
+let nextDate = '25';
+
+let differenceDates = parseInt(nextDate) - parseInt(date);
+console.log('Difference between the two dates', differenceDates); // 2
+
+/*
+Example - Convert the integer to string
+*/
+let afterConversion = differenceDates.toString();
+console.log('Convert the integer to string', differenceDates.toString()); // 2
+console.log('Check the type of the converted string =>', typeof afterConversion); // string
