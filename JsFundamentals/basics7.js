@@ -32,7 +32,7 @@ console.log('Age of the person is ', newPerson.getAge()); // Age of the person i
 Example - constructor example
 */
 
-class Guest {
+export default class Guest {
     constructor(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -42,5 +42,7 @@ class Guest {
     }
 }
 
+/*
 let guest = new Guest('John', 'Doe');
 console.log('Full name of the guest is ', guest.fullName()); // Full name of the guest is  John Doe
+*/
