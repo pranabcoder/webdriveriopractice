@@ -44,3 +44,17 @@ Example - Do the iteration of the object through keys and prints the values
 for (let key in person) {
     console.log('Key is ', key, ' and value is ', person[key]);
 } // Key is  firstName  and value is  Jane, Key is  lastName  and value is  Doe
+
+/*
+Example - add a function to the object
+*/
+let newPerson = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+console.log('Full name of the person is ', newPerson.fullName()); // John Doe
