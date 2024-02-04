@@ -1,8 +1,8 @@
-describe('E-Commerce Application', () => {
+describe('E-Commerce Application', async() => {
 
-    it('Login Fail Page', () => {
-        browser.url('https://rahulshettyacademy.com/loginpagePractise/');
-        browser.maximizeWindow();
-        console.log(browser.getTitle());
+    it('Login Fail Page', async() => {
+        await browser.url('https://rahulshettyacademy.com/loginpagePractise/');
+        await browser.maximizeWindow();
+        console.log(await browser.getTitle());
     });
 });
