@@ -40,6 +40,9 @@ export default class Guest {
     fullName() {
         return this.firstName + " " + this.lastName;
     }
+    getLocation() {
+        return "Earth";
+    }
 }
 
 

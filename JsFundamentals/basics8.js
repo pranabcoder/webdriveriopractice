@@ -13,7 +13,18 @@ class Pet extends Guest {
         this.petName = petName;
     }
 
+    getLocation(){
+        return "Earth, Milky Way";
+    }
+
     petInfo() {
-        return `Pet name is ${this.petName}`;
+        return `${this.petName}`;
     }
 }
+
+let pet = new Pet("John", "Doe", "Tom");
+let petInfo = pet.petInfo();
+let fullName = pet.fullName();
+let location = pet.getLocation();
+console.log(`${fullName} has a pet named ${petInfo} from location ${location}`); // John Doe has a pet named Tom from location Earth
+
