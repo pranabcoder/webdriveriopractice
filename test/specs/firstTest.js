@@ -22,7 +22,12 @@ describe('E-Commerce Application', async() => {
         await passwordLocator.setValue("learning");
         const signingButton = $("#signInBtn");
         await signingButton.click();
-        await browser.pause(3000);
+        await browser.waitUntil(async () => {
+            return await $("#signInBtn").getAttribute('value') === 'Sign In';
+        },{
+            timeout: 5000,
+            timeoutMsg: 'Error message is not displayed'
+        });
         console.log(await $(".alert-danger").getText());
     });
 });
