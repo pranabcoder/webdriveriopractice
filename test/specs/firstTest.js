@@ -29,5 +29,6 @@ describe('E-Commerce Application', async() => {
             timeoutMsg: 'Error message is not displayed'
         });
         console.log(await $(".alert-danger").getText());
+        await expect($("p")).toHaveText(expect.stringContaining('username is rahulshettyacademy and Password is learning'));
     });
 });
