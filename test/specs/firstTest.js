@@ -1,6 +1,6 @@
 describe('E-Commerce Application', async() => {
 
-    it('Login Fail Page', async() => {
+    xit('Login Fail Page', async() => {
         await browser.url('https://rahulshettyacademy.com/loginpagePractise/');
         await browser.maximizeWindow();
         console.log(await browser.getTitle());
@@ -30,5 +30,19 @@ describe('E-Commerce Application', async() => {
         });
         console.log(await $(".alert-danger").getText());
         await expect($("p")).toHaveText(expect.stringContaining('username is rahulshettyacademy and Password is learning'));
+    });
+    it('Login Success Page', async() => {
+        await browser.url('https://rahulshettyacademy.com/loginpagePractise/');
+        await browser.maximizeWindow();
+        await $("#username").setValue("rahulshettyacademy");
+        const passwordLocator = $("//input[@type='password']");
+        await passwordLocator.setValue("learning");
+        const signingButton = $("#signInBtn");
+        await signingButton.click();
+        // wait until checkout button is displayed
+        await $(".btn-primary").waitForExist();
+        // check Url contains 'shop'
+        await expect(browser).toHaveUrl(expect.stringContaining('shop'));
+        await expect(browser).toHaveTitle(expect.stringContaining('ProtoCommerce'));
     });
 });
