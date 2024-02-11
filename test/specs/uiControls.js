@@ -9,11 +9,16 @@ describe('UI Controls Test Suite', async() => {
         const radioButtons = await $$(".radiotextsty");
         const userDropdown = radioButtons[1];
         await userDropdown.click();
-        await browser.waitUntil(async () => {
-            return await $("#okayBtn").getAttribute('value') === 'Okay';
-        },{
-            timeout: 5000,
-            timeoutMsg: 'Error message is not displayed'
-        });
+        // Handling modal dialog
+        const modalDialog = await $(".modal-body");
+        await modalDialog.waitForDisplayed();
+        await $("#cancelBtn").click();
+        console.log('Value is', await $$(".customradio")[0].$("span").isSelected());
+        await userDropdown.$("span").click(); // Chaining locators
+        await modalDialog.waitForDisplayed();
+        await $("#okayBtn").click();
+        // Validate popup not shown up when you select admin
+        await $$(".customradio")[0].$("span").click();
+        await expect(modalDialog).not.toBeDisplayed();
     });
 });

@@ -10,7 +10,7 @@ describe('UI Controls Test Suite', async() => {
         const userDropdown = radioButtons[1];
         await userDropdown.$("span").click(); // Chaining locators
         await browser.waitUntil(async () => {
-            return await $("#okayBtn").getAttribute('value') === 'Okay';
+            return await $(".modal-body").getAttribute('value') === 'Okay';
         },{
             timeout: 5000,
             timeoutMsg: 'Error message is not displayed'
